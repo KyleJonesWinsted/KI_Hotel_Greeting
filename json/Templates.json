@@ -1,0 +1,7 @@
+[
+    {
+        "id": 1,
+        "shortName": "Default",
+        "templateText": "Good {timeOfDay} {firstName}, and welcome to {company}! Room {roomNumber} is now ready. Enjoy your stay and let us know if you need anything!"
+    }
+]
