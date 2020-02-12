@@ -1,7 +1,12 @@
 [
     {
         "id": 1,
-        "shortName": "Default Greeting",
+        "shortName": "Simple Greeting",
         "templateText": "Good [timeOfDay] [firstName], and welcome to [companyName]! Room [roomNumber] is now ready. Enjoy your stay and let us know if you need anything!"
+    },
+    {
+        "id": 2,
+        "shortName": "Verbose Greeting",
+        "templateText": "Hello [firstName] [lastName]. I hope you are having a good [timeOfDay]. When you are ready Room [roomNumber] will be waiting for you. If you have any questions feel free to ask! Enjoy your stay at [companyName]."
     }
 ]
