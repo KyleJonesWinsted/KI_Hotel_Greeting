@@ -5,3 +5,6 @@ class Company(object):
         self.company = company
         self.city = city
         self.timezone = timezone
+
+    def __repr__(self):
+        return "Company(id: {}, name: {}".format(self.id, self.company)

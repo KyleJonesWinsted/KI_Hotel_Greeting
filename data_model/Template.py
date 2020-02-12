@@ -27,3 +27,6 @@ class Template(object):
             return "Afternoon"
         else:
             return "Morning"
+
+    def __repr__(self):
+        return "Template: {}".format(self.shortname)
