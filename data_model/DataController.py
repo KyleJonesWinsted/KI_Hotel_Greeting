@@ -8,9 +8,10 @@ class DataController(object):
     def __init__(self):
         self.file_paths = {}
 
-    def add_file_path(self, path_name, file_path):
+    def set_file_path(self, path_name, file_path):
         self.file_paths[path_name] = file_path
 
+    #Verifies file path has been set for path name (ex. 'guests') else raises Exception
     def _get_file_path(self, path_name):
         try:
             file_path = self.file_paths[path_name]
@@ -68,6 +69,7 @@ class DataController(object):
             companies.append(new_company)
         return companies
 
+    #Not used - could be implemented in future for full CRUD functionality
     def add_new_template(self, template):
         template_json = template.serialize()
         file_path = self._get_file_path('templates')
@@ -76,7 +78,7 @@ class DataController(object):
         data.append(template_json)
         with open(file_path, mode='w') as json_file:
             json_file.write(json.dumps(data, indent=4))
-            
+
 
 class FileException(Exception):
     pass

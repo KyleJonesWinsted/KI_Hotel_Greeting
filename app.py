@@ -5,12 +5,12 @@ from data_model.DataController import DataController
 from data_model.UserInterface import UserInterface
 
 db = DataController()
-db.add_file_path('templates', './json/Templates.json')
-db.add_file_path('guests', './json/Guests.json')
-db.add_file_path('companies', './json/Companies.json')
+db.set_file_path('templates', './json/Templates.json')
+db.set_file_path('guests', './json/Guests.json')
+db.set_file_path('companies', './json/Companies.json')
 
 def main():
-    print("Press Control+C at any time to exit.\n\n")
+    print("\nPress Control+C at any time to exit.\n")
     guests = db.get_all_guests()
     companies = db.get_all_companies()
     templates = db.get_all_templates()

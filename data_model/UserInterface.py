@@ -3,6 +3,15 @@ from data_model.Template import Template
 
 class UserInterface(object):
 
+    """
+    Program executes in the following order
+    Select template or custom greeting ->
+    Select/Enter greeting ->
+    Select company ->
+    Select guest ->
+    Greeting is sent and program restarts
+    """
+
     def __init__(self, guests, companies, templates):
         self.guests = guests
         self.companies = companies
@@ -12,6 +21,7 @@ class UserInterface(object):
         self.current_guest = None
         self.current_company = None
 
+    #Ensures user input is an int and within the range of options, else asks for input again
     def _get_user_int_input(self, user_prompt, menu, number_of_options):
         try:
             user_input = int(input(user_prompt))
@@ -102,7 +112,7 @@ class UserInterface(object):
 
         self.main_menu()
 
-
+    #Prints all options in options list along with a corresponding number
     def _enumerate_options(self, options):
         print("")
         for i, option in enumerate(options):

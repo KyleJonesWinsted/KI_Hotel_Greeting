@@ -32,6 +32,7 @@ class Template(object):
     def __repr__(self):
         return "Template(id: {}, name: {})".format(self.id, self.shortname)
 
+    #Serializes template for JSON storage
     def serialize(self):
         return {
             "id": self.id,
