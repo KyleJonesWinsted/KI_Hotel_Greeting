@@ -5,9 +5,12 @@ class Guest(object):
         self.first_name = first_name
         self.last_name = last_name
         self.reservation = reservation
+    
+    def full_name(self):
+        return "{} {}".format(self.first_name, self.last_name)
 
     def __repr__(self):
-        return "Guest(id: {}, name: {} {}".format(self.id, self.first_name, self.last_name)
+        return "Guest(id: {}, name: {} {})".format(self.id, self.first_name, self.last_name)
 
 
 class Reservation(object):

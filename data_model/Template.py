@@ -29,4 +29,4 @@ class Template(object):
             return "Morning"
 
     def __repr__(self):
-        return "Template: {}".format(self.shortname)
+        return "Template(name: {})".format(self.shortname)

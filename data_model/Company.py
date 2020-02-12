@@ -7,4 +7,4 @@ class Company(object):
         self.timezone = timezone
 
     def __repr__(self):
-        return "Company(id: {}, name: {}".format(self.id, self.company)
+        return "Company(id: {}, name: {})".format(self.id, self.company)
