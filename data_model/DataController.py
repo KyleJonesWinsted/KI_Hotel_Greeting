@@ -77,9 +77,6 @@ class DataController(object):
         with open(file_path, mode='w') as json_file:
             json_file.write(json.dumps(data, indent=4))
             
- 
-        
-
 
 class FileException(Exception):
     pass
