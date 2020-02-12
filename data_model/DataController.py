@@ -29,6 +29,7 @@ class DataController(object):
         data = self._load_json('templates')
         for template in data:
             new_template = Template(
+                id = template['id'],
                 shortname = template['shortName'],
                 template_text = template['templateText']
             )
@@ -67,6 +68,16 @@ class DataController(object):
             companies.append(new_company)
         return companies
 
+    def add_new_template(self, template):
+        template_json = template.serialize()
+        file_path = self._get_file_path('templates')
+        with open(file_path, mode='r') as json_file:
+            data = json.load(json_file)
+        data.append(template_json)
+        with open(file_path, mode='w') as json_file:
+            json_file.write(json.dumps(data, indent=4))
+            
+ 
         
 
 

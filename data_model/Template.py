@@ -4,7 +4,8 @@ from datetime import datetime
 
 class Template(object):
 
-    def __init__(self, shortname, template_text):
+    def __init__(self, id, shortname, template_text):
+        self.id = id
         self.shortname = shortname
         self.template_text = template_text
 
@@ -29,4 +30,11 @@ class Template(object):
             return "Morning"
 
     def __repr__(self):
-        return "Template(name: {})".format(self.shortname)
+        return "Template(id: {}, name: {})".format(self.id, self.shortname)
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "shortName": self.shortname,
+            "templateText": self.template_text
+        }
