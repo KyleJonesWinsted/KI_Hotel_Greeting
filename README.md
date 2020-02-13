@@ -71,5 +71,5 @@ If given more time to work on improving this application I would first work on a
 
 4. Implementing a proper GUI. The specific language and framework would depend on the deployment strategy for the application. For example, you could design a front-end web app in React and use the classes and functionality in this application to support a Flask or Django server running the necessary RESTful APIs.
 
-5. Create test JSON files to run more of my code against without risk of damaging production data. This would also prevent tests from failing due to changes in production data.
+5. Create test data to run more of my code against without risk of damaging production data. This would also prevent tests from failing due to changes in production data.
 
